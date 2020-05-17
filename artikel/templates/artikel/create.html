@@ -8,15 +8,15 @@
 	<h1>{{page_title}}</h1>
 
 
-	<form method='POST'>
-		{% csrf_token %}
+		<form method='POST'>
+			{% csrf_token %}
 
-		{% for form in post_form %}
-			<div class="form-group">
-				{{form.label}}
-				{{form}}
-			</div>
-		{% endfor %}
-		<button class='btn btn-primary' type="Submit">Posting</button>
-	</form>
+			{% for form in post_form %}
+				<div class="form-group" style="margin-right: 10px">
+					{{form.label}}
+					{{form}}
+				</div>
+			{% endfor %}
+			<button class='btn btn-primary' type="Submit">Posting</button>
+		</form>
 {% endblock content %}

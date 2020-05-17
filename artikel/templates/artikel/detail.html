@@ -3,18 +3,9 @@
 
 {% block content %}
 
-{% for post in Posts %}
+<h1>{{Posts.judul}}</h1>
+<p>{{Posts.publish}}</p>
+<p>{{Posts.body}}</p>
 
-	<div class="container-fluid">
-		<div class="container bg-success text-white shadow" style="margin-top:-50px; center; height: 200px;" id="myBody">
-			<div style="font-family: 'Times New Roman', Times, serif; margin-left: 10px;">
-				<h1>{{Posts.judul}}</h1>
-				<p>{{Posts.publish}}</p>
-				<p>{{Posts.body}}</p>
-			</div>
-		</div>
-	</div>
-
-{% endfor %}
 
 {% endblock content %}

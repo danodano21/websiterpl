@@ -18,7 +18,7 @@ def allPost(request):
 def detailPost(request,slugInput):
      posts = PostModel.objects.get(slug=slugInput);
      context = {
-          'title':'Orplant Artikel',
+          'title':'Orplant',
           'Posts':posts,
      }
 
@@ -35,9 +35,14 @@ def createPost(request):
                return redirect('artikel:allpost')
 
      context = {
-          'title':'Orplant Artikel',
-          'page_title':'Create Post',
+          'title':'Orplant c',
+          'page_title':'Membuat Artikel',
           'post_form':post_form,
      }
 
      return render(request,'artikel/create.html',context)
+
+# menghapus artikel
+def deletePost(request, SlugInput):
+     PostModel.objects.filter(slug=slugInput).delete()
+     return redirect('artikel:allpost')
