@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<nav class="navbar navbar-expand-md navbar-light bg-success shadow" style="margin-top: -40px">
+	  <a class="navbar-brand" href="create/">Membuat Artikel</a>
+</nav>	  
+	{% for post in Posts %}
+
+	<div class="container-fluid">
+		<div class="container bg-success text-white shadow" style=" center; height: 200px;" id="myBody">
+			<div style="font-family: 'Times New Roman', Times, serif; margin-left: 10px;">
+				<h3>{{post.judul}}</h3>
+				<p>Penulis : {{post.author}}</p>
+				<p>{{post.publish}}</p>
+				<p>{{post.body|truncatechars:200}}</p>
+				<a href="/artikel/post/{{post.slug}}" title="">
+					<p>read more ...</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	{% endfor %}
+
+{% endblock content %}
