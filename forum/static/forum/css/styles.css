@@ -1,0 +1,6 @@
+.jumbotron{
+	background-image:url("/static/img/Header_Forum.png");
+	background-position:center;
+	background-size: cover;
+	height:200px;
+}
