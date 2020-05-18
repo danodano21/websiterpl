@@ -43,6 +43,6 @@ def createPost(request):
      return render(request,'artikel/create.html',context)
 
 # menghapus artikel
-def deletePost(request, SlugInput):
-     PostModel.objects.filter(slug=slugInput).delete()
+def deletePost(request, delete_id):
+     PostModel.objects.filter(id=delete_id).delete()
      return redirect('artikel:allpost')
